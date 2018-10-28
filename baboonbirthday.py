@@ -78,6 +78,7 @@ def birthday():
     baboon.goto(100, -210)
     baboon.down()
     turtle.reset()
+    turtle.hideturtle()
     baboon.color('red', 'black')
     baboon.pensize(1)
     baboon.speed(1)
@@ -126,7 +127,7 @@ def main():
 
 
 if __name__ == '__main__':
-    if datetime.date.today() == datetime.date(2018, 10, 29):
+    if datetime.date.today() == datetime.date(2018, 11, 2):
         birthday()
     else:
         main()
