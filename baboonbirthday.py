@@ -77,6 +77,39 @@ def birthday():
     baboon.up()
     baboon.goto(100, -210)
     baboon.down()
+    turtle.reset()
+    baboon.color('red', 'black')
+    baboon.pensize(1)
+    baboon.speed(1)
+    baboon.up()
+    baboon.goto(0, -150)
+    baboon.down()
+    baboon.begin_fill()
+    baboon.goto(0, -150)
+    baboon.goto(-175.12, -8.59)
+    baboon.left(140)
+    pos = []
+    for i in range(19):
+        baboon.right(10)
+        baboon.forward(20)
+        pos.append((-baboon.pos()[0], baboon.pos()[1]))
+    for item in pos[::-1]:
+        baboon.goto(item)
+    baboon.goto(175.12, -8.59)
+    baboon.goto(0, -150)
+    baboon.left(50)
+    baboon.end_fill()
+    baboon.up()
+    baboon.goto(0, 80)
+    baboon.down()
+    baboon.write("喵姐姐", font=(u"方正舒体", 36, "normal"), align="center")
+    baboon.up()
+    baboon.goto(0, 0)
+    baboon.down()
+    baboon.write("生日快乐！", font=(u"方正舒体", 48, "normal"), align="center")
+    baboon.up()
+    baboon.goto(100, -210)
+    baboon.down()
     a = turtle.Pen()
     turtle.bgcolor("black")
     sides = 7
@@ -93,7 +126,7 @@ def main():
 
 
 if __name__ == '__main__':
-    if datetime.date.today() == datetime.date(2018, 10, 28):  # YYYY年,MM月,DD日
+    if datetime.date.today() == datetime.date(2018, 10, 29):
         birthday()
     else:
         main()
